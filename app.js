@@ -29,19 +29,19 @@
       const expenseItem = document.createElement('div');
       expenseItem.classList.add('container');
       expenseItem.innerHTML = `
-        <div class="row">
-          <div class="col-12">
-            <div class="category-card">
-              <span>${category} <i class="fas fa-rupee-sign"></i>${price.toFixed(2)} (Count: ${expense.count})</span>
-              <div class="buttons">
-                <button onclick="increaseCount(${index})">+</button>
-                <button onclick="decreaseCount(${index})">-</button>
-                <button onclick="editExpense(${index})">Edit</button>
-                <button onclick="deleteCategory(${index})">Delete</button>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="category-card">
+                <span>${category} <i class="fas fa-rupee-sign"></i>${price.toFixed(2)} (Count: ${expense.count})</span>
+                <div class="buttons">
+                  <button style="margin:2px" onclick="increaseCount(${index})">+</button>
+                  <button style="margin:2px" onclick="decreaseCount(${index})">-</button>
+                  <button style="margin:2px" onclick="editExpense(${index})">Edit</button>
+                  <button style="margin:2px" onclick="deleteCategory(${index})">Delete</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       `;
       expensesElement.appendChild(expenseItem);
     });
